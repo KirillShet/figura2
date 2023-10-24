@@ -79,17 +79,17 @@ namespace ConsoleApp2
             S = (float)((a1 * A(a1, n1) * n1) / 2) + (float)((a1 * n1 * Math.Sqrt(Math.Pow(h1, 2) + Math.Pow(A(a1, n1), 2))) / 2);
             return S;
         }
-        public float perimeter3(float a1, float n1, float h1)
+        public float perimeter3(float a1, float h1, float n1)
         {
             P = (a1 * n1) + ((float)(Math.Sqrt(Math.Pow(h1, 2) + Math.Pow(A(a1, n1), 2))) * n1);
             return P;
         }
-        public float vich2(float r1, float h1)
+        public float vich2(float h1, float r1)
         {
             V = (float)(Math.PI * Math.Pow(r1, 2) * h1) / 3;
             return V;
         }
-        public float square5(float r1, float h1)
+        public float square5(float h1, float r1)
         {
             S = (float)Math.PI * r1 * (float)Math.Sqrt(Math.Pow(h1, 2) + Math.Pow(r1, 2)) + (float)Math.PI * (float)Math.Pow(r1, 2);
             return S;

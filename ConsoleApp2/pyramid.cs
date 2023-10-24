@@ -25,7 +25,6 @@ namespace ConsoleApp1
                 Console.WriteLine("Площадь пирамидки: " + square5(h1, r1));
                 Console.WriteLine("Объем пирамиды равен: " + vich2(h1, r1));
             }
-
         }
     }
 }

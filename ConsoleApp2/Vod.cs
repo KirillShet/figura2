@@ -93,6 +93,10 @@ namespace ConsoleApp2
                 Console.WriteLine("Введите радиус круга.");
                 this.r = float.Parse(Console.ReadLine());
             }
+            else
+            {
+                Console.WriteLine("Вы ввели не то число.");
+            }
             a = this.a;
             n = this.n;
             r = this.r;
