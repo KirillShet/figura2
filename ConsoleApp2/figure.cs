@@ -15,16 +15,6 @@ namespace ConsoleApp2
         public float V;
         public float Ap;
         public float S;
-        protected float perimeter(float a1, float b1)
-        {
-            P = a1 * 2 + b1 * 2;
-            return P;
-        }
-        protected float Square(float a1, float b1)
-        {
-            S = a1 * b1;
-            return S;
-        }
         protected float perimeter1(float a1)
         {
             P = 2 * (float)Math.PI * a1;
@@ -46,6 +36,5 @@ namespace ConsoleApp2
             S = (float)Math.Sqrt(perimeter2(a1, b1, c1) / 2 * (perimeter2(a1, b1, c1) / 2 - a1) * (perimeter2(a1, b1, c1) / 2 - b1) * (perimeter2(a1, b1, c1) / 2 - c1));
             return S;
         }
-       
     }
 }

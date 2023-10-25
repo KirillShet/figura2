@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,10 +10,23 @@ namespace ConsoleApp1
 {
     internal class square1: figure
     {
-        public void out_info(float a2, float b)
+        protected float a;
+        public void info5(float a5)
         {
-                Console.WriteLine("Периметр фигуры: " + perimeter(a2, a2));
-                Console.WriteLine("Площадь фигуры: " + Square(a2, a2));
+            this.a = a5;
+        }
+        protected virtual void perimeter()
+        {
+            Console.WriteLine(a * 4);
+        }
+        protected virtual void Square()
+        {
+            Console.WriteLine(a * a);
+        }
+        public void out_info()
+        {
+            Console.Write("Периметр фигуры: "); perimeter();
+            Console.Write("Площадь фигуры: "); Square();
         }
     }
 }

@@ -9,59 +9,68 @@ namespace ConsoleApp1
 {
     internal class pyramid: triangle1
     {
-        private float vich(float a1, float h1, float n1, float r1)
+        private float p;
+        private float s;
+        private float V;
+        private float h;
+        private float n;
+        public void info5(float a5, float h5, float n5, float r5)
         {
-            if (r1 == 0)
+            a = a5; this.h = h5; this.r = r5; this.n = n5; 
+        }
+
+        private void vich()
+        {
+            if (r == 0)
             {
-                V = (float)(n1 * h1 * Math.Pow(a1, 2)) / (float)(12 * Math.Tan(Math.PI / n1));
+                V = (float)(n * h * Math.Pow(a, 2)) / (float)(12 * Math.Tan(Math.PI / n));
+                Console.WriteLine(V);
             }
             else
             {
-                V = (float)(Math.PI * Math.Pow(r1, 2) * h1) / 3;
+                V = (float)(perimeter1(r) * h) / 6;
+                Console.WriteLine(V);
             }
-            return V;
         }
-        private float A(float a1, float n1)
+        protected override void perimeter()
         {
-            Ap = a1 / (float)(2 * Math.Tan(Math.PI / n1));
-            return Ap;
-        }
-        private float square3(float a1, float h1, float n1, float r1)
-        {
-            if (r1 == 0)
+            float Ap = a / (float)(2 * Math.Tan(Math.PI / n));
+            if (r == 0)
             {
-                S = (float)((a1 * A(a1, n1) * n1) / 2) + (float)((a1 * n1 * Math.Sqrt(Math.Pow(h1, 2) + Math.Pow(A(a1, n1), 2))) / 2);
+                P = (a * n) + ((float)(Math.Sqrt(Math.Pow(h, 2) + Math.Pow(Ap, 2))) * n);
+                Console.WriteLine(P);
             }
             else
             {
-                S = (float)Math.PI * r1 * (float)Math.Sqrt(Math.Pow(h1, 2) + Math.Pow(r1, 2)) + (float)Math.PI * (float)Math.Pow(r1, 2);
+                P = 2 * (float)Math.PI * r;
+                Console.WriteLine(P);
             }
-            return S;
         }
-        private float perimeter3(float a1, float h1, float n1, float r1)
+        protected override void Square()
         {
-            if (r1 == 0)
+            float Ap = a / (float)(2 * Math.Tan(Math.PI / n));
+            if (r == 0)
             {
-                P = (a1 * n1) + ((float)(Math.Sqrt(Math.Pow(h1, 2) + Math.Pow(A(a1, n1), 2))) * n1);
-                
+                S = (float)((a * Ap * n) / 2) + (float)((a * n * Math.Sqrt(Math.Pow(h, 2) + Math.Pow(Ap, 2))) / 2);
+                Console.WriteLine(S);
             }
             else
             {
-                P = (float)(Math.PI * 2 * r1);
+                S = (float)Math.PI * r * (float)Math.Sqrt(Math.Pow(h, 2) + Math.Pow(r, 2)) + (float)Math.PI * (float)Math.Pow(r, 2);
+                Console.WriteLine(S);
             }
-            return P;
         }
-        public void out_info(float a1, float h1, float n1, float r1)
+        public void out_info()
         {
-            if (r1 == 0 && a1 == 0 && n1 == 0)
+            if (r == 0 && a == 0 && n == 0)
             {
                 Console.WriteLine();
             }
             else
             {
-                    Console.WriteLine("Периметр пирамидки: " + perimeter3(a1, h1, n1, r1));
-                    Console.WriteLine("Площадь пирамидки: " + square3(a1, h1, n1, r1));
-                    Console.WriteLine("Объем пирамиды равен: " + vich(a1, h1, n1, r1));
+                Console.Write("Периметр пирамидки: "); perimeter();
+                Console.Write("Площадь пирамидки: "); Square();
+                Console.Write("Объем пирамиды равен: "); vich();
 
             }
         }
