@@ -21,15 +21,13 @@ namespace ConsoleApp1
                 square1 squ = new square1();
                 squ = new square1();
                 pyramid pyr = new pyramid();
-                Vod score = new Vod();
-                score = new Vod();
                 Console.WriteLine("1 - квадрат, 2 - прямоугольник, 3 - круг, 4 - тругольник, 5 - пирамида.");
                 var = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
                 if (var == 1)
                 {
                     Console.WriteLine("Квадрат");
-                    score.info(out float a);
+                    squ.info(out float a);
                     squ.out_info(a, a);
                 }
                 else if (var == 2)

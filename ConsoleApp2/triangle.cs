@@ -9,13 +9,6 @@ namespace ConsoleApp1
 {
     internal class triangle1: circle1
     {
-        private float a2;
-        private float b2;
-        private float c2;
-        public void info(float a2, float b2, float c2)
-        {
-            this.a2 = a2; this.b2 = b2; this.c2 = c2;
-        }
         private void type(float a2, float b2, float c2)
         {
             if (Math.Pow(c2, 2) == (Math.Pow(a2, 2) + Math.Pow(b2, 2)))

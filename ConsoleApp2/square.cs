@@ -9,11 +9,6 @@ namespace ConsoleApp1
 {
     internal class square1: figure
     {
-        private float a2;
-        private void info1(float a2)
-        {
-            this.a = a2;
-        }
         public void out_info(float a2, float b)
         {
                 Console.WriteLine("Периметр фигуры: " + perimeter(a2, a2));
