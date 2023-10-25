@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class square1: figure
+    internal class square1: Vod
     {
         protected float a;
         public void info5(float a5)

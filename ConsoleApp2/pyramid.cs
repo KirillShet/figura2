@@ -9,8 +9,8 @@ namespace ConsoleApp1
 {
     internal class pyramid: triangle1
     {
-        private float p;
-        private float s;
+        private float P;
+        private float S;
         private float V;
         private float h;
         private float n;
@@ -28,7 +28,7 @@ namespace ConsoleApp1
             }
             else
             {
-                V = (float)(perimeter1(r) * h) / 6;
+                V = (float)(Math.PI * Math.Pow(r, 2) * h) / 3;
                 Console.WriteLine(V);
             }
         }
